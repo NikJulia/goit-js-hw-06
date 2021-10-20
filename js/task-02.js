@@ -18,22 +18,22 @@ const ingredientsList = document.querySelector('#ingredients');
 
 // Вариант 1
 
-// const ingredientsListMaker = items => {
-//   return items.map(item => {
-//     const listItem = document.createElement('li');
-//     listItem.classList.add('item`');
-//     listItem.textContent = item;
-//     return listItem;
-//   });
-// };
+const ingredientsListMaker = items => {
+  return items.map(item => {
+    const listItem = document.createElement('li');
+    listItem.classList.add('item`');
+    listItem.textContent = item;
+    return listItem;
+  });
+};
 
-// ingredientsList.append(...ingredientsListMaker(ingredients));
+ingredientsList.append(...ingredientsListMaker(ingredients));
 
 
 // Вариант 2
 
-ingredients.forEach(item => {
-  const listItem = document.createElement('li');
-  listItem.textContent = item;
-  ingredientsList.appendChild(listItem);
-})
+// ingredients.forEach(item => {
+//   const listItem = document.createElement('li');
+//   listItem.textContent = item;
+//   ingredientsList.appendChild(listItem);
+// })

@@ -28,24 +28,24 @@ const gallery = document.querySelector('.gallery');
 
 // Вариант 1
 
-// const makeGalleryMarkup = image => {
-//   const { url, alt } = image;
-//   return `
-//   <li class="gallery__item">
-//   <img class="gallery__image" src="${url}" alt="${alt}">
-//   </li>
-//   `;
-// };
+const makeGalleryMarkup = image => {
+  const { url, alt } = image;
+  return `
+  <li class="gallery__item">
+  <img class="gallery__image" src="${url}" alt="${alt}">
+  </li>
+  `;
+};
 
-// const galleryMarkup = images.map(makeGalleryMarkup).join('');
-// gallery.insertAdjacentHTML('beforeend', galleryMarkup);
+const galleryMarkup = images.map(makeGalleryMarkup).join('');
+gallery.insertAdjacentHTML('beforeend', galleryMarkup);
 
 // Вариант 2
 
-images.forEach(item => {
-  gallery.insertAdjacentHTML(
-    'beforeend',
-    `<li class="gallery__item">
-    <img class="gallery__image" src="${item.url}" alt="${item.alt}" width="500">
-    </li>`);
-})
+// images.forEach(item => {
+//   gallery.insertAdjacentHTML(
+//     'beforeend',
+//     `<li class="gallery__item">
+//     <img class="gallery__image" src="${item.url}" alt="${item.alt}" width="500">
+//     </li>`);
+// })
